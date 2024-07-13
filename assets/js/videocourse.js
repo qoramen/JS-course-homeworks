@@ -1,5 +1,5 @@
 'use strict';
-// --------------------- Destructuring -------------------------
+// 1 ---------- Destructuring, spread va rest operatorlari --------------
 
 // #### Destructuring
 
@@ -74,7 +74,7 @@
 // ** Rest operatori bir nechta elementlarni array’ga
 // yoki bir nechta xususiyatlarni obyektga to'playdi. **
 
-// -------------- Short circuit, Nullish va nOptional chaining -----------------
+// 2 -------------- Short circuit, Nullish va nOptional chaining -----------------
 
 // Short-circuit evaluation
 
@@ -149,7 +149,7 @@
 // console.log(univerName);
 // console.log(person.school?.());
 
-// ---------------------  Maps va Sets -------------------------
+// 3 ---------------------  Maps va Sets -------------------------
 
 // #### Maps
 
@@ -216,3 +216,94 @@
 // console.log(mySet.has(10)); // false
 
 // console.log(mySet.size); // 4
+
+// 4 ------------------ JS Runtime va Engine ---------------------
+
+// #### JS Runtime
+
+// ** Javascript Runtime - maxsus muhit bo’lib, Javascript kodni ishga
+// tushirish uchun kerak bo’ladigan barcha dasturlar va kutubxonalarni o’z
+// ichiga oladi. Uning asosiy qismi JS Engine bo’lib, undan tashqari Event
+// Loop, Timer’lar bilan ishlash, va kod ishga tushayotgan muhit bilan aloqa
+// o’rnatish uchun kerak bo’ladigan API’larni ham taqdim etadi. **
+
+// Javascript Engine (Callback, Memory) --> WEB APIs (consle, setTimeout, fetch) --> Callback Queue
+// JAVASCRIPT RUNTIME ENVIRONMENT
+
+// more information (https://dev.to/manak/the-javascript-engine-52h2)
+
+// #### JS Engine
+
+// ** JS Engine - kompyuter dasturi bo’lib, Javascript tilida yozilgan kodni
+// interpret qilishda yordam beradi. Boshqacha qilib aytganda, JS engine
+// JS’da yozilgan kodni ishga tushiradi. --
+// --Hozirga eng mashhur engine’lardan biri Google Chrome V8 hisoblanadi. **
+
+// Kod ishga tushishini sodda ko’rinishi
+
+// JS Engine
+// JS File --> Parser --> Ast --> Interpreter --> Profiler --> Compiler --> Optimized codde --> Your Screen
+
+// 1. Parser - HTML hujjatimizdagi barcha script tag’laridagi JS kodlarni ajratib olib,
+// va token’larga o’giradi
+
+// 2. AST - oldingi qadamdan olingan token’lar yordamida AST node’lari yaratilinadi
+
+// 3. Interpreter - berilgan AST’dagi node’larni o’qib  chiqib, byte 
+// kodga o’giradi. Kod satr bo’ylab, tepadan pastga qarab ishga tushiriladi
+
+// 4. Profiler - kodni optimizatsiyalash uchun kuzatadi
+
+// 5. Compiler - interpretatsiya sekin bo’lgani uchun, ko’p qaytariladigan kodlar
+// kompilyatsiya qilinadi va shu orqali kodni ishga tushirish vaqti qisqaradi
+
+// JS Engine asosiy qismlari:
+// Call Stack - berilgan kod ishga tushiriladigan qism
+
+// Heap - memory pool bo’lib, dasturimizga kerak bo’ladigan obyektlarni 
+// saqlash vazifasini bajaradi
+
+// more information (https://dev.to/sanderdebr/a-brief-explanation-of-the-javascript-engine-and-runtime-2idg);
+
+// 5 ------------------  EventLoop ---------------------
+
+// #### EventLoop
+
+// ** Javascript barcha amaliyotni bitta thread’da amalga oshiradi, bu degani
+// berilgan vaqtda faqatgina bitta kod ishga tushiriladi. Lekin maxsus data
+// structure’lar yordamida, JS’da multi-threading’ga o’xshash holatni amalga
+// oshirsa bo’ladi. **
+
+// ** Call stack - ishga tushirilishi kerak bo’lgan barcha funksiyalarni o’zida
+// saqlab turadi. Funksiya o’z ishini tugatgandan so’ng stack’dan olib
+// tashlanadi. **
+
+// ** Call stack - ishga tushirilishi kerak bo’lgan barcha funksiyalarni o’zida
+// saqlab turadi. Funksiya o’z ishini tugatgandan so’ng stack’dan olib
+// tashlanadi. **
+
+// 1 ex.
+
+// function greet() {
+//     return "Hello";
+// }
+
+// function respond() {
+//     return setTimeout(() => {
+//         return "Hey!";
+//     }, 1000);
+// };
+
+// greet();
+// respond();
+
+// 2 ex.
+
+// const foo = () => console.log("First");
+// const bar = () => setTimeout(() => console.log("Second"), 1000);
+// const baz = () => console.log("Third");
+// bar();
+// foo();
+// baz();
+
+// more information (https://dev.to/lydiahallie/javascript-visualized-event-loop-3dif)
