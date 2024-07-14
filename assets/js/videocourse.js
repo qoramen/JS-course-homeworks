@@ -3,7 +3,7 @@
 
 // #### Destructuring
 
-// ** "Destructuring" - Javascript’dagi maxsus ifoda bo’lib, uning yordamida
+// 💡 ** "Destructuring" - Javascript’dagi maxsus ifoda bo’lib, uning yordamida
 //  array’dagi qiymatlarini yoki obyektdagi xossalarini ajratib olish imkonini beradi. **
 
 // array misol
@@ -30,7 +30,7 @@
 
 // #### Rest operator;
 
-// ** "Rest operator" - miqdori oldindan aniq bo’lmagan qiymatlarni
+// 💡 ** "Rest operator" - miqdori oldindan aniq bo’lmagan qiymatlarni
 // array ko’rinishda ifodalashda ishlatilinadi **
 
 // const total = (...numbers) => {
@@ -53,7 +53,7 @@
 
 // #### Spread operator
 
-// "Spread operator" - takrorlanadigan (array’ga o’xshash) qiymatlarni yoyishda ishlatilinadi.
+// 💡 ** "Spread operator" - takrorlanadigan (array’ga o’xshash) qiymatlarni yoyishda ishlatilinadi. **
 
 // const numbers = [1, 5, 3];
 // const max = Math.max(...numbers);
@@ -68,17 +68,17 @@
 // const personWithJob = { ...person, age: 17 };
 // console.log(personWithAge);
 
-// ** Spread operatori iteratsiya elementlarini yoki
-// obyektning xususiyatlarini "yoyadi". **
+// $$ Spread operatori iteratsiya elementlarini yoki
+// obyektning xususiyatlarini "yoyadi". $$
 
-// ** Rest operatori bir nechta elementlarni array’ga
-// yoki bir nechta xususiyatlarni obyektga to'playdi. **
+// $$ Rest operatori bir nechta elementlarni array’ga
+// yoki bir nechta xususiyatlarni obyektga to'playdi. $$
 
 // 2 -------------- Short circuit, Nullish va nOptional chaining -----------------
 
 // Short-circuit evaluation
 
-// ** Javascript dasturlash tilida berilgan ifodani chapdan o’ngga qarab ||
+// 💡 ** Javascript dasturlash tilida berilgan ifodani chapdan o’ngga qarab ||
 // (OR) va && (AND) operatorlar yordamida hisoblashga short-circuit
 // evaluation deyiladi.
 // Agar kutilgan shart bajarilsa, va berilgan ifodaning qolgan qismi shartga
@@ -87,7 +87,7 @@
 
 // #### || (OR)
 
-// ** || operatori birinchi rost (true) bo’lgan qiymatni darhol qaytarib
+// 💡 ** || operatori birinchi rost (true) bo’lgan qiymatni darhol qaytarib
 // yuboradi. Agar berilgan operand’lardan hech qaysisi rost (true) qiymatga
 // ega bo’lmasa, yolg’on (false) qiymati qaytarilinadi. **
 
@@ -105,7 +105,7 @@
 
 // #### && (AND)
 
-// ** && operatori berilgan ifodada yolg’onga (false) uchrasa darhol false
+// 💡 ** && operatori berilgan ifodada yolg’onga (false) uchrasa darhol false
 // qaytaradi. Agar berilgan operand’larning barchasi rost (true) bo’lsa, oxirgi
 // rost qiymat qaytarilinadi **
 
@@ -123,7 +123,7 @@
 
 // Nullish coalescing operator
 
-// ** Nullish coalescing ( ?? ) operatori mantiqiy operator bo’lib, berilgan
+// 💡 ** Nullish coalescing ( ?? ) operatori mantiqiy operator bo’lib, berilgan
 // ifodaning chap operandi null yoki undefined bo’lgan holatda, o’ng
 // tarafdagi qiymat qaytirilinadi, aks holda chap operand qiymatni qaytaradi. **
 
@@ -134,7 +134,7 @@
 
 // #### Optional chaining
 
-// ** Optional chaining ( ?. ) operatori berilgan obyektni xossasini olishda
+// 💡 ** Optional chaining ( ?. ) operatori berilgan obyektni xossasini olishda
 // yoki funksiyasini chaqirishda ishlatilinadi. Agar obyekt yoki berilgan
 // funksiya undefined yoki null bo’ladigan bo’lsa, berilgan ifoda short
 // circuit’ga uchraydi va natijaviy qiymat undefined ’ga teng bo’ladi va hech
@@ -153,7 +153,7 @@
 
 // #### Maps
 
-// ** Map obyekti o’zida key-value (kalit-qiymat) ko’rinishidagi juftliklarni
+// 💡 ** Map obyekti o’zida key-value (kalit-qiymat) ko’rinishidagi juftliklarni
 // saqlaydi va kalitlarni kiritilgan tartibda saqlab turadi. **
 
 // const myMap = new Map();
@@ -173,7 +173,7 @@
 
 // console.log(myMap.size);
 
-// ** Obyetklarga xossa qo’shganimizdek, map’larga ham xossa qo’shish
+// ❗ ** Obyetklarga xossa qo’shganimizdek, map’larga ham xossa qo’shish
 // imkoniyati mavjud lekin u ba’zi bir tushunmovchiliklarga olib kelishi
 // mumkun. **
 
@@ -189,7 +189,7 @@
 
 // #### Sets
 
-// ** Set obyekti unique bo’lgan qiymatlarni saqlashda ishlatilinadi. Set obyekti
+// 💡 ** Set obyekti unique bo’lgan qiymatlarni saqlashda ishlatilinadi. Set obyekti
 // qiymatlar to’plamidan tashkil topgan bo’lib, berilgan qiymat to’plamda
 // faqatgina bir martta uchrashi mumkun. **
 
@@ -221,7 +221,7 @@
 
 // #### JS Runtime
 
-// ** Javascript Runtime - maxsus muhit bo’lib, Javascript kodni ishga
+// 💡 ** Javascript Runtime - maxsus muhit bo’lib, Javascript kodni ishga
 // tushirish uchun kerak bo’ladigan barcha dasturlar va kutubxonalarni o’z
 // ichiga oladi. Uning asosiy qismi JS Engine bo’lib, undan tashqari Event
 // Loop, Timer’lar bilan ishlash, va kod ishga tushayotgan muhit bilan aloqa
@@ -234,7 +234,7 @@
 
 // #### JS Engine
 
-// ** JS Engine - kompyuter dasturi bo’lib, Javascript tilida yozilgan kodni
+// 💡 ** JS Engine - kompyuter dasturi bo’lib, Javascript tilida yozilgan kodni
 // interpret qilishda yordam beradi. Boshqacha qilib aytganda, JS engine
 // JS’da yozilgan kodni ishga tushiradi. --
 // --Hozirga eng mashhur engine’lardan biri Google Chrome V8 hisoblanadi. **
@@ -269,16 +269,16 @@
 
 // #### EventLoop
 
-// ** Javascript barcha amaliyotni bitta thread’da amalga oshiradi, bu degani
+// 💡 ** Javascript barcha amaliyotni bitta thread’da amalga oshiradi, bu degani
 // berilgan vaqtda faqatgina bitta kod ishga tushiriladi. Lekin maxsus data
 // structure’lar yordamida, JS’da multi-threading’ga o’xshash holatni amalga
 // oshirsa bo’ladi. **
 
-// ** Call stack - ishga tushirilishi kerak bo’lgan barcha funksiyalarni o’zida
+// 💡 ** Call stack - ishga tushirilishi kerak bo’lgan barcha funksiyalarni o’zida
 // saqlab turadi. Funksiya o’z ishini tugatgandan so’ng stack’dan olib
 // tashlanadi. **
 
-// ** Call stack - ishga tushirilishi kerak bo’lgan barcha funksiyalarni o’zida
+// 💡 ** Call stack - ishga tushirilishi kerak bo’lgan barcha funksiyalarni o’zida
 // saqlab turadi. Funksiya o’z ishini tugatgandan so’ng stack’dan olib
 // tashlanadi. **
 
@@ -307,3 +307,157 @@
 // baz();
 
 // more information (https://dev.to/lydiahallie/javascript-visualized-event-loop-3dif)
+
+// 6 ------------------ Hoisting va TDZ ---------------------
+
+// #### Hoisting
+
+// 💡 ** 'Hoisting' - Javascript dasturlash tilida funksiya yoki o’zgaruvchini e’lon qilishdan oldin
+// ishlatish mumkun. Hoisting sababli Javascript’dagi funksiya va o’zgaruvchilarimiz
+// berilgan scope’ning yuqori qismiga olib o’tiladi **
+
+// console.log(firstname);
+// var firstname = 'Ulugbek';
+
+// 💡 ** O’zgaruvchini e’lon qilishda ishlatgan ka’lit so’zimizga qarab, hosting turli xil natijaga
+// olib keladi **
+
+//  VAR
+
+// console.log(firstname);
+// var firstname = 'Ulugbek';
+// console.log(firstname);
+// console.log(lastname); // Xato yuzaga keladi
+
+// LET va CONST
+
+// console.log(firstname);
+// let firstname = 'Ulugbek';
+
+// FUNCTION HOISTING
+
+// 💡 ** Funksiyalar bilan ham hoisting yuz beradi. Uning yordamida funksiyani hali e’lon
+// qilinmasidan oldin ishlatish imkoniyati mavjud **
+
+// displayFirstname(); // "Ulugbek"
+
+// function displayFirstname() {
+//     console.log('Ulugbek');
+// }
+
+// ❗ ** Faqatgina function declaration orqali elon qilingan funksiyalarni chaqirganimizda, ular
+// xatosiz ishga tushadi. Function expressions’lar esa xato beradi **
+
+// displayFirstname(); // Uncaught ReferenceError: Cannot access 'displayFirstname' before initialization
+
+// const displayFirstname = function () {
+//     console.log('Ulugbek');
+// }
+
+// more information (https://dev.to/lydiahallie/javascript-visualized-hoisting-478h)
+
+// #### TDZ
+
+// 💡 ** TDZ (Temporal Dead Zone) - o’zgaruvchini scope boshlanishi va e’lon qilingan
+// joyigacha bo’lgan hududga aytiladi. O’zgaruvchini TDZ ichida ishlatish,
+// ReferenceError’ga olib keladi **
+
+// {
+//     // firstname uchun TDZ boshlanishi
+//     console.log(firstname); // ReferenceError
+//     let firstname = 'Ulugbek'; // TDZ tugashi
+// }
+
+// more information (https://www.freecodecamp.org/news/what-is-hoisting-in-javascript/)
+
+// 7 ------------ Value va reference ma’lumot turlari ---------------
+
+// #### Value/Primitive data type
+
+// 💡 ** Javascript dasturlash tilida 7 xil ko’rinishdagi primitive ma’lumot turlari
+// mavjud va ular: string , number , bigint , boolean , undefined , symbol va 
+// null . Bunday ma’lumot turlarini saylaydigan o’zgaruvchilarga qiymat
+// berilganda, o’zgaruvchi qiymatni o’zini saqlaydi **
+
+// let age = 10;
+// let firstname = 'Ulugbek';
+// let job = null;
+
+// 💡 ** Assignment (=) operatori orqali, berilgan primitive data type saqlaydigan
+// o’zgaruvchini, boshqa o’zgaruvchiga tenglaganimizda, o’ng tarafdagi
+// o’zgaruvchining qiymati chap tarafdagi o’zgaruvchiga ko’chirilib
+// o’tkazilinadi. **
+
+// let person1Name = 'Ulugbek';
+
+// let person2Name = person1Name;
+// console.log(person1Name);
+// console.log(person2Name);
+
+// person1Name = 'Alex';
+// console.log(person1Name);
+// console.log(person2Name);
+
+// #### Reference data type
+
+// 💡 ** O’zgaruvchiga non-primitive ya’ni reference ko’rinishidagi o’zgaruvchi
+// berilganda, u qiymatning reference’si o’zgaruvchida saqlanadi. Reference
+// bu berilgan obyektning xotiradagi manzilidir **
+
+// const hobbies = ['Football', 'Coding'];
+// const anotherHobbies = hobbies;
+// console.log(hobbies);
+// console.log(anotherHobbies);
+
+// hobbies.push('Swimming');
+// console.log(hobbies);
+// console.log(anotherHobbies);
+
+// const person = {
+//     name: 'Ulugbek',
+//     age: 25,
+//     job: 'Software Engineer'
+// };
+
+// const anotherPerson = person;
+// console.log(person);
+// console.log(anotherPerson);
+
+// anotherPerson.age = 26;
+// console.log(person);
+// console.log(anotherPerson);
+
+// 💡 ** Reference turdagi o’zgaruvchilar ustida == yoki === amali bajarilganda,
+// operator ikkala o’zgaruvchinini o’zida saqlab turayotgan xotira manzilini
+// tekshiradi **
+
+// const hobbies = ['Football', 'Coding'];
+// const anotherHobbies = hobbies;
+
+// if (hobbies === anotherHobbies) {
+//     console.log('1. Idendical hobbies');
+// };
+
+// const newHobbies = ['Football', 'Coding'];
+// if (hobbies === newHobbies) {
+//     console.log('2. Idendical hobbies');
+// };
+
+// 💡 ** Maxsus operatorlardan foydalanish orqali, reference turdagi
+// o’zgaruvchilardan ham nusxa olish imkoniyati mavjud **
+
+// Arrays
+// const hobbies = ['Football', 'Coding'];
+// const spreadHobbies = [...hobbies]; // Spread operator
+
+// const forHobbies = [];
+// for (const hobby of hobbies) { // For Loop
+//     forHobbies.push(hobby);
+// }
+
+// const jsonHobbies = JSON.parse(JSON.stringify(hobbies)); // JSON Parse
+
+// more information
+// 1 -- (https://excalidraw.com/)
+// 2 -- (https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0)
+// 3 -- (https://medium.com/@jordanmmartin/js-pass-by-value-vs-pass-by-reference-5a8c9ebf4d14)
