@@ -173,7 +173,7 @@
 
 // console.log(myMap.size);
 
-// ❗ ** Obyetklarga xossa qo’shganimizdek, map’larga ham xossa qo’shish
+// ⚠️ ** Obyetklarga xossa qo’shganimizdek, map’larga ham xossa qo’shish
 // imkoniyati mavjud lekin u ba’zi bir tushunmovchiliklarga olib kelishi
 // mumkun. **
 
@@ -267,7 +267,7 @@
 
 // 5 ------------------  EventLoop ---------------------
 
-// #### EventLoop
+// #### EventLoop 💼
 
 // 💡 ** Javascript barcha amaliyotni bitta thread’da amalga oshiradi, bu degani
 // berilgan vaqtda faqatgina bitta kod ishga tushiriladi. Lekin maxsus data
@@ -310,7 +310,7 @@
 
 // 6 ------------------ Hoisting va TDZ ---------------------
 
-// #### Hoisting
+// #### Hoisting 💼
 
 // 💡 ** 'Hoisting' - Javascript dasturlash tilida funksiya yoki o’zgaruvchini e’lon qilishdan oldin
 // ishlatish mumkun. Hoisting sababli Javascript’dagi funksiya va o’zgaruvchilarimiz
@@ -345,7 +345,7 @@
 //     console.log('Ulugbek');
 // }
 
-// ❗ ** Faqatgina function declaration orqali elon qilingan funksiyalarni chaqirganimizda, ular
+// ⚠️ ** Faqatgina function declaration orqali elon qilingan funksiyalarni chaqirganimizda, ular
 // xatosiz ishga tushadi. Function expressions’lar esa xato beradi **
 
 // displayFirstname(); // Uncaught ReferenceError: Cannot access 'displayFirstname' before initialization
@@ -461,3 +461,157 @@
 // 1 -- (https://excalidraw.com/)
 // 2 -- (https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0)
 // 3 -- (https://medium.com/@jordanmmartin/js-pass-by-value-vs-pass-by-reference-5a8c9ebf4d14)
+
+// 8 --------------------- “this” ka’lit so’zi ---------------------------
+
+// #### this keyword 💼
+
+// ** Javascript dasturlash tilida, this ka’lit so’zi method chaqirilgan obyekt’ga
+// yoki u belgilangan context’ga reference hisoblanadi. Context’ga qarab 
+// this ka’lit so’zi o’zidagi reference’ni o’zgartiradi **
+
+// && Quyida this qanday reference’ga ega bo’lishini ko’rib chiqamiz :
+
+// 1. Global context - global context’da(funksiya yoki metod tashqarisida), this
+// global obyektga reference hisoblanadi
+
+// console.log(this);
+
+// 2. Funksiya ichida - oddiy funksiyalarda ham this global obyektga reference
+// saqlaydi
+
+// function myFunction() {
+//     console.log(this);
+// }
+
+// myFunction();
+
+// ⚠️ ** Strict mode holatida esa undefined qiymatiga ega bo’ladi **
+
+// 'use strict';
+
+// function myFunction() {
+//     console.log(this);
+// }
+
+// myFunction();
+
+// 3. Obyektning metodi ichida - funksiya obyektning metodi sifatida chaqirilganda,
+// this metod chaqirilayotgan obyektga reference qiladi
+
+// const person = {
+//     name: 'Ulugbek',
+//     printName: function () {
+//         console.log(this.name);
+//     }
+// }
+
+// person.printName();
+
+// 4. call va apply holatida - argument sifatida this berib yuborilishi mumkun
+
+// function printName() {
+//     console.log(`Hello, ${this.name}!`);
+// }
+
+// const person1 = { name: 'Ulugbek' };
+
+// printName.call(person1);
+
+// 5. Arrow funksiya ichida - arrow funksiya ichida this funksiya e’lon qilingan
+// scope’ga reference qiladi
+
+// const person = {
+//     name: 'Ulugbek',
+//     printName: function () {
+//         setTimeout(() => {
+//             console.log(`Hello, ${this.name}!`);
+//         }, 1000);
+//     }
+// }
+
+// person.printName()
+
+// no more information
+
+// 9 ---------------- Higher Order Functions(HOF) --------------------
+
+// #### HOF (Higher Order Functions)
+
+// 💡 ** Funksiya qaytaradigan va/yoki argument sifatida boshqa funksiya qabul
+// qiladigan funksiyalarga HOF deyiladi **
+
+// %% Funksiyani argument sifatida berib yuborish
+// const isEven = (num) => num % 2 === 0;
+// const numbers = [1, 2, 3, 4, 5, 6, 7, 8];
+// const evenNumbers = numbers.filter(isEven);
+// console.log(evenNumbers);
+
+// %% Funksiyaning funksiya qaytarish holati
+// const add = (x) => (y) => x + y;
+// const result = add(10)(15);
+// console.log(result);
+
+// Soliq hisoblab beruvchi funksiya
+// function createTaxCalculator(taxRate) {
+//     return function (productPrice) {
+//         return productPrice * taxRate;
+//     };
+// } 
+
+// const educationTax = createTaxCalculator(0.05); // 5% tax
+// const transportationTax = createTaxCalculator(0.2); // 20% tax
+// const foodTax = createTaxCalculator(0.1); // 10% tax
+
+// console.log(educationTax(1000));
+
+// 10 ---------------- call, bind va apply metodlari --------------------
+
+// #### call 💼
+
+// 💡 ** call() metodi berilgan funksiyani ko’rsatilgan this reference va berilgan argument’lar bilan
+// ishga tushirib beradi **
+
+// function introduce(greeting, hobby) {
+//     console.log(greeting + ", my name is " + this.firstname + " " + this.lastname + ". I like " + hobby + ".");
+// }
+
+// const person = {
+//     firstname: 'Ulugbek',
+//     lastname: 'Samigjonov'
+// };
+
+// introduce.call(person, "Hello", "reading");
+
+// #### apply 💼
+
+// 💡 ** apply() metodi berilgan funksiyani ko’rsatilgan this reference va berilgan argument’lar array’i
+// bilan ishga tushirib beradi **
+
+// function introduce(greeting, hobby) {
+//     console.log(greeting + ", my name is " + this.firstname + " " + this.lastname + ". I like " + hobby + ".");
+// }
+
+// const person = {
+//     firstname: 'Ulugbek',
+//     lastname: 'Samigjonov'
+// };
+
+// introduce.apply(person, ["Hello", "reading"]); 
+
+// #### bind 💼
+
+// 💡 ** bind() metodi berilgan funksiyadan ko’rsatilgan this reference va berilgan argument’lar
+// yordamida yangi funksiya yaratib, qaytaradi **
+
+// function introduce(greeting, hobby) {
+//     console.log(greeting + ", my name is " + this.firstname + " " + this.lastname + ". I like " + hobby + ".");
+// }
+
+// const person = {
+//     firstname: 'Ulugbek',
+//     lastname: 'Samigjonov'
+// };
+
+// const introducePerson = introduce.bind(person, "Hello", "reading");
+// introducePerson();
