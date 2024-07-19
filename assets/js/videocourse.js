@@ -278,9 +278,8 @@
 // saqlab turadi. Funksiya o’z ishini tugatgandan so’ng stack’dan olib
 // tashlanadi. **
 
-// 💡 ** Call stack - ishga tushirilishi kerak bo’lgan barcha funksiyalarni o’zida
-// saqlab turadi. Funksiya o’z ishini tugatgandan so’ng stack’dan olib
-// tashlanadi. **
+// 💡 ** EventLoop - bu biron bir dasturda, ayniqsa asinxron dasturlashda, voqealarni yoki 
+// vazifalarni bajarish uchun navbatga solib ishlov beruvchi mexanizmdir. **
 
 // 1 ex.
 
@@ -375,7 +374,7 @@
 // #### Value/Primitive data type
 
 // 💡 ** Javascript dasturlash tilida 7 xil ko’rinishdagi primitive ma’lumot turlari
-// mavjud va ular: string , number , bigint , boolean , undefined , symbol va 
+// mavjud va ular: string , number , bigint , boolean , undefined , symbol va
 // null . Bunday ma’lumot turlarini saylaydigan o’zgaruvchilarga qiymat
 // berilganda, o’zgaruvchi qiymatni o’zini saqlaydi **
 
@@ -467,7 +466,7 @@
 // #### this keyword 💼
 
 // ** Javascript dasturlash tilida, this ka’lit so’zi method chaqirilgan obyekt’ga
-// yoki u belgilangan context’ga reference hisoblanadi. Context’ga qarab 
+// yoki u belgilangan context’ga reference hisoblanadi. Context’ga qarab
 // this ka’lit so’zi o’zidagi reference’ni o’zgartiradi **
 
 // && Quyida this qanday reference’ga ega bo’lishini ko’rib chiqamiz :
@@ -557,7 +556,7 @@
 //     return function (productPrice) {
 //         return productPrice * taxRate;
 //     };
-// } 
+// }
 
 // const educationTax = createTaxCalculator(0.05); // 5% tax
 // const transportationTax = createTaxCalculator(0.2); // 20% tax
@@ -597,7 +596,7 @@
 //     lastname: 'Samigjonov'
 // };
 
-// introduce.apply(person, ["Hello", "reading"]); 
+// introduce.apply(person, ["Hello", "reading"]);
 
 // #### bind 💼
 
@@ -615,3 +614,5 @@
 
 // const introducePerson = introduce.bind(person, "Hello", "reading");
 // introducePerson();
+
+// after hour
