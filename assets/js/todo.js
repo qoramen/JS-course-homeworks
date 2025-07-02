@@ -2,10 +2,9 @@ function createInput() {
     const firstInput = document.getElementById('f-input').value;
     const newInputContain = document.getElementById('new-input-contain');
 
-    const newInputDiv = document.createElement('div');
-    const newInput = document.createElement('input');
-    newInput.type = 'text';
-    newInput.value = firstInput;
+    const newInputDiv = document.createElement('ul');
+    const newInput = document.createElement('li');
+    newInput.textContent = firstInput;
 
     const deleteBtn = document.createElement('button');
     deleteBtn.textContent = 'Delete';
